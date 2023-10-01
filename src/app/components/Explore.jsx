@@ -1,12 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
 import Image from "next/image";
-
-import { TitleText } from "../components/CustomTexts";
 
 const Explore = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -37,128 +34,83 @@ const Explore = () => {
     gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
   }, []);
 
-
   return (
-    <section className={`${styles.paddings}`} id="explore">
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-      >
-        <TitleText
-          title={
-            <>
-              Choose the world you want <br className="md:block hidden" /> to
-              explore
-            </>
-          }
-          textStyles="text-center"
+    <div className="max-w-5xl	 mx-auto">
+      <div>
+        Choose the world you want <br className="" /> to explore
+      </div>
+
+      <div className="grid grid-cols-3 gap-10">
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
         />
-        <div className="grid grid-cols-4 gap-4">
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image
-            width="600"
-            height="600"
-            src="/images/cakes/cake1.jpg"
-            alt=""
-            class="skewElem"
-          />
-          <Image width="600" height="600" src="/0" alt="" class="skewElem" />
-        </div>
-      </motion.div>
-    </section>
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
+        />
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
+        />
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
+        />
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
+        />
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
+        />
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
+        />
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
+        />
+        <Image
+          width="400"
+          height="400"
+          src="/images/cakes/cake1.jpg"
+          alt=""
+          class="skewElem"
+        />
+        <Image width="400" height="400" src="/0" alt="" class="skewElem" />
+      </div>
+    </div>
   );
 };
 
 export default Explore;
-
-const staggerContainer = (staggerChildren, delayChildren) => ({
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren,
-      delayChildren,
-    },
-  },
-});
-
-const styles = {
-  innerWidth: "2xl:max-w-[1280px] w-full",
-  interWidth: "lg:w-[80%] w-[100%]",
-
-  paddings: "sm:p-16 xs:p-8 px-6 py-12",
-  yPaddings: "sm:py-16 xs:py-8 py-12",
-  xPaddings: "sm:px-16 px-6",
-  topPaddings: "sm:pt-16 xs:pt-8 pt-12",
-  bottomPaddings: "sm:pb-16 xs:pb-8 pb-12",
-
-  flexCenter: "flex justify-center items-center",
-  flexStart: "flex justify-start items-start",
-  flexEnd: "flex justify-end",
-  navPadding: "pt-[98px]",
-
-  // hero section
-  heroHeading:
-    "font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white",
-  heroDText:
-    "md:w-[212px] sm:w-[80px] w-[60px] md:h-[108px] sm:h-[48px] h-[38px] md:border-[18px] border-[9px] rounded-r-[50px] border-white sm:mx-2 mx-[6px]",
-};
 
 const exploreWorlds = [
   {
